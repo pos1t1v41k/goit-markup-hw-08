@@ -1,0 +1,88 @@
+.card {
+   display: flex;
+   flex-wrap: wrap;
+   margin-left: calc(-1 * $card-gap);
+   margin-top: calc(-1 * $card-gap);
+
+}
+
+.card-set__item {
+   flex-basis: calc(100% / 3 - $card-gap);
+   margin-top: $card-gap;
+   margin-left: $card-gap;
+}
+
+.card-set__link {
+   text-decoration: none;
+   display: block;
+   transition-property: box-shadow;
+   transition-duration: $transition-duration;
+   transition-timing-function: $transition-timing-function;
+   &:hover,
+   &:focus{
+   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+   }
+}
+
+.card-set__thumb {
+   position: relative;
+   overflow: hidden;
+}
+
+.card-set__animation {
+   transform: translateY(100%);
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: $background-card-color;
+   transition: 250ms $transition-timing-function;
+   .card-set__link:hover &
+   { transform: translateY(0);}
+
+.card-set__link:focus &
+   { transform: translateY(0);}
+}
+
+.card-set__overlay {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.card-set-text__overlay {
+   font-style: normal;
+   font-weight: 400;
+   font-size: 18px;
+   line-height: 28px;
+   letter-spacing: 0.03em;
+   color: $primary-white-color;
+   min-width: 322px;
+}
+
+.card-set__content {
+   padding: 20px 24px;
+   border-bottom: 1px solid #EEEEEE;
+   border-left: 1px solid #EEEEEE;
+   border-right: 1px solid #EEEEEE;
+}
+
+.card-set-catalog__heading {
+   color: $title-text-color;
+   margin-bottom: 4px;
+   font-family: "Roboto";
+   font-style: normal;
+   font-weight: 700;
+   font-size: 18px;
+   line-height: 2;
+   letter-spacing: 0.06em;
+}
+
+.card-set-catalog__text {
+   font-size: 16px;
+   line-height: 1.85;
+   letter-spacing: 0.03em;
+   color: $primary-text-color;
+}

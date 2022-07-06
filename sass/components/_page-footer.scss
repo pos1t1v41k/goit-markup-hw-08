@@ -1,0 +1,196 @@
+.footer {
+   background-color: $secondary-bg-color;
+   padding-top: 60px;
+   padding-bottom: 60px;
+}
+
+.page-footer__container {
+   display: flex;
+   align-items: baseline;
+}
+
+.page-footer__column{
+   margin-right : 70px;
+   &:last-child {
+   margin-right: 0;
+   }
+   }
+
+.footer-form__column {
+   margin-left: auto
+}
+
+.page-footer__logo {
+   color: $accent-color;
+   text-decoration: none;
+   font-family: "Raleway";
+   font-style: normal;
+   font-weight: 700;
+   font-size: 26px;
+   line-height: 1.2;
+   letter-spacing: 0.03em;
+   display: inline-block;
+   margin-bottom: 20px;
+   &--color {
+   color: $primary-white-color;
+   }
+}
+
+.page-footer__adress {
+   color: $primary-white-color;
+   text-decoration: none;
+   font-family: "Roboto";
+   font-style: normal;
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 1.7;
+   letter-spacing: 0.03em;
+   display: block;
+   transition-property: color;
+   transition-duration: $transition-duration;
+   transition-timing-function: $transition-timing-function;
+   &:hover,
+   &:focus {
+   color: $accent-color;
+   }
+}
+
+.page-footer__connect {
+   color: rgba(255, 255, 255, 0.6);
+   text-decoration: none;
+   font-family: "Roboto";
+   font-style: normal;
+   font-size: 14px;
+   line-height: 1.7;
+   letter-spacing: 0.03em;
+   display: block;
+   transition-property: color;
+   transition-duration: $transition-duration;
+   transition-timing-function: $transition-timing-function;
+   &:hover,
+   &:focus{
+   color: $accent-color;
+   }
+   }
+
+   .page-footer-title__column {
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: $primary-bg-color;
+      margin-bottom: 20px;
+   }
+
+   .footer-column__list {
+      display: flex;
+   }
+
+   .page-footer-social__item {
+   margin-right: 10px;
+   &:last-child{
+   margin-right: 0;
+}
+   }
+
+   .page-footer-social__link {
+   width: 44px;
+   height: 44px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+border-radius: 50%;
+color: $primary-white-color;
+background-image: linear-gradient( to right,
+   rgba(255, 255, 255, 0.1),
+   rgba(255, 255, 255, 0.1));
+   transition-property: background-color;
+   transition-duration: $transition-duration;
+   transition-timing-function: $transition-timing-function;
+   &:hover,
+   &:focus{
+   background-color:$accent-color ;
+   }
+   }
+
+   .page-foooter-social-icon__link {
+   width: 20px;
+   height: 20px;
+   fill: currentColor;
+   }
+
+   .page-footer__form {
+   margin-left: auto;
+   }
+
+   .page-footer-form__text {
+   margin-bottom: 20px;
+   font-weight: 700;
+   font-size: 14px;
+   line-height: 16px;
+   letter-spacing: 0.03em;
+   text-transform: uppercase;
+   color: $primary-white-color;
+   }
+
+   .page-footer__field {
+   display: flex;
+   }
+
+   .page-footer__email {
+      color: $primary-white-color;
+      background-color: inherit;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 4px;
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+      width: 358px;
+      height: 50px;
+      padding:0 0 0 16px ;
+      outline: none;
+      transition-property: border-color;
+      transition-duration: $transition-duration;
+      transition-timing-function: $transition-timing-function;
+      &:hover,
+      &:focus{
+      border: 1px solid $accent-color;  
+      }
+      &::placeholder{
+      font-size: 16px;
+      line-height: 1.25;
+      letter-spacing: 0.03em;
+      color: rgba(255, 255, 255, 0.6);
+      }
+}
+   
+
+   .page-footer__btn {
+      margin-left: 12px;
+      width: 200px;
+      height: 50px;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+      border-radius: 4px;
+      background-color: $accent-color;
+      cursor: pointer;
+      border: none;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      letter-spacing: 0.06em;
+      color: $primary-white-color;
+      
+      &:hover,
+      &:focus {
+         background-color: #188CE8;
+      }
+   }
+
+   .page-footer__icon {
+   margin-left: 10px;
+   align-items: center;
+   width: 24px;
+   height: 24px;
+   }

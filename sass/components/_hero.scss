@@ -1,0 +1,54 @@
+.hero {
+   background-color:$secondary-bg-color;
+   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/owerlay.jpg);
+   background-position: center;
+   background-position: center;
+   
+   text-align: center;
+   padding-top: 200px;
+   padding-bottom: 200px;
+   height: 600px;
+   max-width: 1600px;
+   margin-left: auto;
+   margin-right: auto;
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+
+.hero__title {
+   margin-bottom: 30px;
+   margin-left: auto;
+   margin-right: auto;
+   color: $primary-white-color;
+   font-style: normal;
+   font-weight: 900;
+   font-size: 44px;
+   width: 696px;
+   line-height: 1.35;
+   letter-spacing: 0.06em;
+   text-transform: uppercase;
+}
+
+.hero__button {
+   color: $primary-white-color;
+   background-color: $accent-color;
+   font-family: "Roboto";
+   font-weight: 700;
+   font-size: 16px;
+   line-height: 1.88;
+   padding: 10px 32px;
+   border-radius: 4px;
+   min-width: 200px;
+   display: inline-block;
+   text-align: center;
+   letter-spacing: 0.06em;
+   cursor: pointer;
+   border: none;
+   transition-property:background-color;
+   transition-duration: $transition-duration;
+   transition-timing-function: $transition-timing-function;
+   &:hover,
+   &:focus {
+   background-color: #188CE8;
+   }
+}

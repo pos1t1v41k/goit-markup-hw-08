@@ -1,0 +1,135 @@
+.page-header {
+   border-bottom: 1px solid #ececec;
+}
+
+.page-header-main-nav {
+   display: flex;
+   align-items: center;
+}
+
+.page-header__logo {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding-top: 25px;
+   padding-bottom: 25px;
+   margin-right: 95px;
+   color: $accent-color;
+   text-decoration: none;
+   font-family: Raleway;
+   font-style: normal;
+   font-weight: 700;
+   font-size: 26px;
+   line-height: 1.2;
+   letter-spacing: 0.03em;
+   transition-property: color;
+   transition-duration: $transition-duration;
+   transition-timing-function: $transition-timing-function;
+   &--color{
+   color: #212121;}
+}
+
+.page-header-site-nav {
+   display: flex;
+}
+
+
+.page-header-site-nav__item {
+   margin-right: 50px;
+   &:last-child{margin-right: 0px;}
+   
+}
+
+.page-header-site-nav {
+   display: flex;
+   align-items: center;
+
+}
+
+
+.page-header-site-nav__link{
+   display: block;
+   padding-top: 32px;
+   padding-bottom: 32px;
+   color: $title-text-color;
+   text-decoration: none;
+   font-weight: 500;
+   font-size: 14px;
+   line-height: 1.2;
+   letter-spacing: 0.02em;
+   transition-property: color;
+   transition-duration: $transition-duration;
+   transition-timing-function: $transition-timing-function;
+   &:hover,
+   &:focus {
+   color: $accent-color;
+   }
+}
+
+
+
+.page-header-site-nav__link--current {
+   position: relative;
+   color: $accent-color;
+   font-weight: 500;
+   font-size: 14px;
+   line-height: 16px; 
+   letter-spacing: 0.02em;
+   text-decoration: none;
+   display: block;
+   padding-top: 32px;
+   padding-bottom: 34px;
+   &::after{
+   position: absolute;
+   content: "";
+   left: 0;
+   bottom: 0;
+   display: block;
+   width: 100%;
+   height: 4px;
+   border-radius: 2px;
+   background-color: $accent-color;
+   }
+   }
+
+   .page-header-site-nav__contacts{
+   display: flex;
+   margin-left: auto;
+   align-items: center;
+   }
+
+   .page-header-site-nav__icon{
+   margin-right: 10px;
+   fill: currentColor;
+   }
+
+.page-header-site-nav-contacts__item {
+   color: #757575
+}
+
+.page-header-site-nav-contacts__item {
+   margin-right: 50px;
+   &:last-child{
+   margin-right: 0;
+   }
+}
+
+.page-header-site-nav__contacts .page-header-site-nav__link {
+   padding-top: 30px;
+   padding-bottom: 30px;
+   font-family: "Roboto";
+   color: $primary-text-color;
+   text-decoration: none;
+   font-weight: 500;
+   font-size: 14px;
+   line-height: 1.2;
+   letter-spacing: 0.02em;
+   display: flex;
+   transition-property: color;
+   transition-duration: $transition-duration;
+   transition-timing-function: $transition-timing-function;
+   &:hover,
+   &:focus{
+   color: $accent-color;
+   }
+}

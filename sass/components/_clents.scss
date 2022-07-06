@@ -1,0 +1,46 @@
+.clients {
+   padding-top: 94px;
+   padding-bottom: 94px;
+   text-align: center;
+}
+
+.clients-title {
+   margin-bottom: 50px;
+   font-size: 36px;
+   line-height: 42px;
+   letter-spacing: 0.03em;
+   color: $title-text-color;
+}
+
+.clients-list {
+   display: flex;
+}
+
+.clients-list__item {
+   margin-right: 30px;
+   &:last-child{margin-right: 0;}
+
+}
+
+.client-link {
+   width: 170px;
+   height: 92px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border: 1px solid $icon-color ;
+   border-radius: 4px;
+   color: $icon-color;
+   transition-property: color, border-color;
+   transition-duration: $transition-duration;
+   transition-timing-function: $transition-timing-function;
+   &:hover,
+   &:focus{
+   color: $accent-color;
+   border-color: $accent-color;
+   }
+}
+
+.client-icon {
+   fill:currentColor
+}
