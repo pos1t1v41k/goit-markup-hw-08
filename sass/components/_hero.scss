@@ -1,75 +1,35 @@
 
-@media screen and (min-width: 320px) and (max-width: 767px) {
-.container {
-   max-width: 480px;
-   margin-left: auto;
-   margin-right: auto;
-   padding-left: 15px;
-   padding-right: 15px;
-}
-.hero{
-   background-color:$secondary-bg-color;
-   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/mobile-Header\ img.jpg);
-   background-position: center;
-   background-position: center;
-   display: block;
-   text-align: center;
+.hero .container {
+   @include mobile {
    padding-top: 118px;
    padding-bottom: 118px;
+   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero-mob.jpg);
+   @include retina {
+   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/Hero-mob@2x.jpg)
+   }
    height: 400px;
-   min-width: 320px;
+
    max-width: 480px;
-   margin-left: auto;
-   margin-right: auto;
-   background-size: cover;
-   background-repeat: no-repeat;
-}
-.hero__title {
-   margin-bottom: 30px;
-   margin-left: auto;
-   margin-right: auto;
-   color: $primary-white-color;
-   font-style: normal;
-   font-weight: 900;
-   font-size: 26px;
-   width: 360px;
-   line-height: 1.35;
-   letter-spacing: 0.06em;
-   text-transform: uppercase;
-   text-align: center;
-}
-.hero__button {
-   color: $primary-white-color;
-   background-color: $accent-color;
-   font-family: "Roboto";
-   font-weight: 700;
-   font-size: 16px;
-   line-height: 1.88;
-   padding: 10px 32px;
-   border-radius: 4px;
-   min-width: 200px;
-   display: inline-block;
-   text-align: center;
-   letter-spacing: 0.06em;
-   cursor: pointer;
-   border: none;
-   transition-property:background-color;
-   transition-duration: $transition-duration;
-   transition-timing-function: $transition-timing-function;
-   &:hover,
-   &:focus {
-   background-color: #188CE8;
    }
+   @include tablet {
+   padding-top: 118px;
+   padding-bottom: 118px;
+   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero-tab.jpg);
+   @include retina {
+   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/Hero-tab@2x.jpg)
    }
-}
-
-
-/*.hero 
+   height: 400px;
+   max-width: 768px;
+   }
+   @include desktop{
    background-color:$secondary-bg-color;
-   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/owerlay.jpg);
+   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/Hero-desktop.jpg);
+   @include retina {
+   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero-desktop@2x.jpg)
+   }
    background-position: center;
    background-position: center;
-   
+
    text-align: center;
    padding-top: 200px;
    padding-bottom: 200px;
@@ -79,9 +39,21 @@
    margin-right: auto;
    background-size: cover;
    background-repeat: no-repeat;
+   }
 }
-
 .hero__title {
+   @include mobile {
+   font-size: 26px;
+   line-height: 1.61;
+   width: 360px;
+   text-align: center;
+   }
+   @include tablet {
+   font-size: 26px;
+   line-height: 1.61;
+   width: 360px;
+   text-align: center;
+   }
    margin-bottom: 30px;
    margin-left: auto;
    margin-right: auto;
@@ -95,7 +67,22 @@
    text-transform: uppercase;
 }
 
+
 .hero__button {
+   @include mobile {
+   display: flex;
+   align-items: center;
+   text-align: center;
+   margin-left: auto;
+   margin-right: auto;
+   }
+   @include tablet {
+   display: flex;
+   align-items: center;
+   text-align: center;
+   margin-left: auto;
+   margin-right: auto;
+   }
    color: $primary-white-color;
    background-color: $accent-color;
    font-family: "Roboto";
@@ -117,4 +104,5 @@
    &:focus {
    background-color: #188CE8;
    }
-}*/
+
+}

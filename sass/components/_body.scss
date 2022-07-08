@@ -1,12 +1,4 @@
-@media screen and (min-width: 320px) and (max-width: 767px) {
-   .container {
-      max-width: 480px;
-      margin-left: auto;
-      margin-right: auto;
-      padding-left: 15px;
-      padding-right: 15px;
-   }
-}
+
 .body {
    background-color: $primary-bg-color;
    color: $title-text-color;
@@ -48,11 +40,27 @@ p {
 }
 
 .container {
+   @include mobile {
+   width: 480px;
+   margin-left: auto;
+   margin-right: auto;
+   padding-left: 15px;
+   padding-right: 15px;
+   }
+   @include tablet {
+   width: 768px;
+   margin-left: auto;
+   margin-right: auto;
+   padding-left: 15px;
+   padding-right: 15px;
+   }
+   @include desktop{
    width: 1200px;
    margin-left: auto;
    margin-right: auto;
    padding-left: 15px;
    padding-right: 15px;
+}
 }
 
 .list-style {

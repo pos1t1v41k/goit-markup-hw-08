@@ -1,69 +1,50 @@
-@media screen and (min-width: 320px) and (max-width: 767px)
-{
-   .container {
-      width: 480px;
-      margin-left: auto;
-      margin-right: auto;
-      padding-left: 15px;
-      padding-right: 15px;
-   }
-
-   .features {
-   padding-top: 60px;
-   padding-bottom: 60px;
-   }
-   
-   .features__title {
-      margin-bottom: 10px;
-      color: $title-text-color;
-      font-family: "Roboto";
-      font-style: normal;
-      font-weight: 700;
-      font-size: 14px;
-      line-height: 16px;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
-      text-align: center;
-   }
-   
-   .features__text {
-      font-size: 14px;
-      line-height: 24px;
-      letter-spacing: 0.03em;
-      color: $primary-text-color;
-      padding-bottom: 30px;
-   }
-   .features-list__item {
-   text-align: center;
-   }
-
-   .features__icon {
-      background-color: $secondary-white-color;
-      width: 100%;
-      height: 120px;
-      margin-bottom: 30px;
-   }
-   
-   }
-
-/*.features {
+.features, .container {
+   @include desktop{
    padding-top: 94px;
    padding-bottom: 94px;
 }
-
-.features__list {
-   display: flex;
 }
 
+.features__list {
+   
+@include desktop{
+display: flex;
+}
+@include tablet {
+   display: flex;
+   flex-wrap: wrap;
+   margin: -15px;
+   }
+
+}
+
+
 .features-list__item {
+   @include mobile {
+   margin-right: 0;
+   margin-bottom: 30px;
+   &:last-child{
+   margin-bottom: 0;
+   }}
+   @include tablet{
+   text-align: left;
+   width: calc((100-4*15)/2);
+   margin: 15px;
+   }
+   
+   @include desktop{
    min-width: 270px;
    margin-right: 30px;
    &:last-child {
    margin-right: 0;
    }
 }
+}
 
 .features__title {
+   @include mobile {
+   text-align: center;
+   }
    margin-bottom: 10px;
    color: $title-text-color;
    font-family: "Roboto";
@@ -75,18 +56,28 @@
    text-transform: uppercase;
 }
 
+
 .features__text {
+   /*@include mobile {
+   min-width: 450px;
+   }*/
+   @include tablet {
+   max-width: 354px;
+   }
+   max-width: 270px;
    font-size: 14px;
-   line-height: 24px;
+   line-height: 1.7;
    letter-spacing: 0.03em;
    color: $primary-text-color;
 }
 
 .features__icon {
+   background-color: $secondary-white-color;
    height: 120px;
-   width: 270px;
+   width: 100%;
    margin-bottom: 30px;
    border-radius: 4px;
    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
-*/
+
+
