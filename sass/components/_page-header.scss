@@ -1,5 +1,8 @@
-.page-header {
+.page-header .container {
    border-bottom: 1px solid #ececec;
+   &--none-border{
+      border-bottom: 0;
+   }
 }
 
 .page-header-main-nav {
@@ -27,10 +30,21 @@
    transition-timing-function: $transition-timing-function;
    &--color{
    color: #212121;}
+   @include tablet {
+      padding-top: 25px;
+      padding-bottom: 25px;
+      margin-right: 88px;
+   }
+   @include desktop {
+      margin-right: 95px;
+   }
 }
 
 .page-header-site-nav {
+   display: none;
+   @include tablet {
    display: flex;
+}
 }
 
 
@@ -41,7 +55,10 @@
 }
 
 .page-header-site-nav {
+   display: none;
+   @include tablet {
    display: flex;
+}
    align-items: center;
 
 }
@@ -93,9 +110,16 @@
    }
 
    .page-header-site-nav__contacts{
+   display: none;
+   @include tablet {
    display: flex;
    margin-left: auto;
-   align-items: center;
+   }
+   @include desktop {
+      display: flex;
+      margin-left: auto;
+      align-items: center;
+   }
    }
 
    .page-header-site-nav__icon{
@@ -108,9 +132,15 @@
 }
 
 .page-header-site-nav-contacts__item {
+   @include tablet{
+   margin-bottom: 10px;
+   &:last-child{ margin-bottom: 0;}
+   }
+   @include desktop {
    margin-right: 50px;
    &:last-child{
    margin-right: 0;
+   }
    }
 }
 
@@ -131,5 +161,9 @@
    &:hover,
    &:focus{
    color: $accent-color;
+   }
+   @include desktop {
+      font-size: 14px;
+      line-height: 1.14;
    }
 }
