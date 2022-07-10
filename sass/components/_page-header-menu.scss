@@ -33,7 +33,7 @@
    &.is-open{
    display: block;
    z-index: 2;
-      @include tablet{
+   @include tablet{
    display: none;
    }
    }
@@ -63,7 +63,7 @@
       fill: $accent-color;
       }
       @include tablet {
-         display: none;
+      display: none;
       }
    }
 
@@ -114,7 +114,7 @@
    .page-header-mobile-site-nav-contacts__list{
       margin-bottom: 64px;
       @include tablet{
-         display: none;
+      display: none;
       }
    }
 

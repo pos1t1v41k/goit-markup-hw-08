@@ -1,16 +1,27 @@
 .portfolio {
-   padding-top: 94px;
-   padding-bottom: 94px;
+   @include mobile {
+      padding-top: 60px;
+      padding-bottom: 60px;
+   }
+   @include desktop {
+      padding-top: 94px;
+      padding-bottom: 94px;
+   }
 }
 
 .button-portfolio__list {
    display: flex;
+flex-wrap: wrap;
+margin-bottom: 35px;
+@include tablet {
+   flex-wrap: nowrap;
    justify-content: center;
-   margin-bottom: 50px;
+}
 }
 
 .button-portfolio__item {
-   margin-right: 10px;
+   margin-right: 8px;
+   margin-bottom: 15px;
    &:last-child{
    margin-right: 0;
    }
