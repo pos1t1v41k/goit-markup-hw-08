@@ -5,22 +5,17 @@
 }
 
 .page-footer__container {
-   /*display: flex;
-   align-items: baseline;*/
    text-align: center;
    @include tablet {
       display: flex;
       flex-wrap: wrap;
-      flex-direction: row;
       align-items: baseline;
-      justify-content: space-between;
+      justify-content: space-around;
    }
 }
 
 .page-footer__column{
-   @include mobile {
    margin-bottom: 60px;
-   }
    @include desktop {
       margin-right : 70px;
       &:last-child {
@@ -70,6 +65,13 @@
    &:hover,
    &:focus {
    color: $accent-color;
+   }
+}
+
+.footer-link-item {
+   margin-bottom: 9px;
+   &:last-child {
+      margin-bottom: 0;
    }
 }
 

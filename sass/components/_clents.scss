@@ -1,53 +1,52 @@
 .clients  {
+   padding-top: 60px;
+   padding-bottom: 60px;
+   text-align: center;
+   @include desktop{
    padding-top: 94px;
    padding-bottom: 94px;
-   text-align: center;
+   }
 }
 
 .clients-title {
-   @include mobile{
-   font-size: 28px;
-   line-height: 1.17;
-   }
    margin-bottom: 50px;
-   font-size: 36px;
-   line-height: 42px;
-   letter-spacing: 0.03em;
+   font-family: "Roboto";
+   font-style: normal;
    color: $title-text-color;
+   font-weight: 700;
+   font-size: 28px;
+   line-height: 1,17;
+   letter-spacing: 0.03em;
+   @include desktop {
+   font-size: 36px;
+   line-height: 1.16;
+   letter-spacing: 0.03em;
+   }
+
 }
 
 .clients-list {
-@include mobile {
    display: flex;
    flex-wrap: wrap;
    margin: -15px;
-   justify-items: center;
-}
-   display: flex;
 }
 
 .clients-list__item {
-   @include mobile {
-   width: 210px;
-   width: calc((100 - 4 * 15) /2 );
+   @include interval {
+   width: calc((100% - 4 * 15px) /2 );
    margin: 15px;
    }
    @include tablet {
-      width: 226px;
-      width: calc((100 - 4 * 15) /3 );
-      margin: 15px;
-      }
-      @include desktop{
-      width: 170px;
-      width: calc((100 - 4 * 15) /6 );
-      margin: 15px;
-      }
-   
-
+   width: calc((100% - 6 * 15px) /3);
+   margin: 15px;
+   }
+   @include desktop {
+   width: calc((100% - 12 * 15px) /6);
+   margin: 15px;
+   }
 }
 
 .client-link {
-
    height: 92px;
    display: flex;
    justify-content: center;
@@ -66,11 +65,5 @@
 }
 
 .client-icon {
-   @include mobile {
-      width: 106px;
-   }
-   @include tablet {
-      width: 106px;
-   }
    fill:currentColor
 }

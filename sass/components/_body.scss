@@ -41,14 +41,14 @@ p {
 
 .container {
    @include mobile {
-   width: 480px;
+   
    margin-left: auto;
    margin-right: auto;
    padding-left: 15px;
    padding-right: 15px;
    }
    @include tablet {
-   width: 768px;
+   width:768px;
    margin-left: auto;
    margin-right: auto;
    padding-left: 15px;
