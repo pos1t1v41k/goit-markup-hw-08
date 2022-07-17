@@ -1,4 +1,4 @@
-.footer .container {
+.footer {
    background-color: $secondary-bg-color;
    padding-top: 60px;
    padding-bottom: 60px;
@@ -7,20 +7,21 @@
 .page-footer__container {
    text-align: center;
    @include tablet {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: baseline;
-      justify-content: space-around;
+   display: flex;
+   flex-wrap: wrap;
+   align-items: baseline;
+   justify-content: space-around;
+   }
+   @include desktop {
+   text-align: start;
    }
 }
 
 .page-footer__column{
    margin-bottom: 60px;
    @include desktop {
-      margin-right : 70px;
-      &:last-child {
-      margin-right: 0;
-      }
+   margin-right : 70px;
+   margin-bottom: 0;
    }
    }
 
@@ -94,12 +95,12 @@
    }
 
    .page-footer-title__column {
-      font-size: 14px;
-      line-height: 16px;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
-      color: $primary-bg-color;
-      margin-bottom: 20px;
+   font-size: 14px;
+   line-height: 1.14;
+   letter-spacing: 0.03em;
+   text-transform: uppercase;
+   color: $primary-bg-color;
+   margin-bottom: 20px;
    }
 
    .footer-column__list {
@@ -158,6 +159,9 @@ background-image: linear-gradient( to right,
    letter-spacing: 0.03em;
    text-transform: uppercase;
    color: $primary-white-color;
+   @include desktop {
+      text-align: left;
+   }
    }
 
    .page-footer__field {
