@@ -7,6 +7,7 @@
    background-color: rgba(0, 0, 0, 0.2);
    opacity: 1;
    transition: $transition-duration $transition-timing-function;
+   overflow-y: scroll;
 }
 
 .backdrop.is-hidden {
@@ -23,15 +24,15 @@
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%) scale(1);
-   width: 450px;
-   height: 609px;
+   max-width: 450px;
+   width: 100%;
    background-color: $primary-bg-color;
    border-radius: 4px;
    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
    transition: transform 250ms $transition-timing-function;
    padding: 40px;
    @include desktop {
-   width: 528px;
+   max-width: 528px;
    height: 581px;
    }
 }
@@ -70,7 +71,7 @@
 }
 
 .modal__form {
-   width: 370px;
+   max-width: 370px;
    @include desktop {
       width: 448px;
    }
@@ -143,6 +144,7 @@
 .modal-textarea__field {
    display: flex;
    flex-direction: column;
+   margin-top: 10px;
    margin-bottom: 20px;
 }
 

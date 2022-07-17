@@ -5,6 +5,9 @@
    font-family: 'Roboto', 'sans-serif';
    font-size: 14px;
    letter-spacing: 0.03em;
+   &.modal-open{
+      overflow: hidden;
+   }
 }
 
 img {
@@ -40,26 +43,18 @@ p {
 }
 
 .container {
-   @include mobile {
-   
-   margin-left: auto;
-   margin-right: auto;
-   padding-left: 15px;
-   padding-right: 15px;
-   }
-   @include tablet {
-   width:768px;
-   margin-left: auto;
-   margin-right: auto;
-   padding-left: 15px;
-   padding-right: 15px;
-   }
-   @include desktop{
-   width: 1200px;
-   margin-left: auto;
-   margin-right: auto;
-   padding-left: 15px;
-   padding-right: 15px;
+margin-left: auto;
+margin-right: auto;
+padding-left: 15px;
+padding-right: 15px;
+@media screen and (min-width:$mobile) {
+   width: $mobile;
+}
+@media screen and (min-width:$tablet) {
+   width: $tablet;
+}
+@media screen and (min-width:$desktop) {
+   width: $desktop;
 }
 }
 
