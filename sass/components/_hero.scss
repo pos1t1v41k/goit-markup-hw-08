@@ -1,48 +1,44 @@
 
-.hero  {
+.hero {
    background-color: $secondary-bg-color;
+
    background-image: 
-   linear-gradient(to right,  rgba(47, 48, 58, 0.4),
-   rgba(47, 48, 58, 0.4)
-   ), url(../img/hero-mob.jpg);
+   url(../img/hero-mob.jpg);
    background-position: center;
    text-align: center;
    padding-top: 118px;
    padding-bottom: 118px;
    max-width: 1600px;
+   background-size: cover;
+   background-repeat: no-repeat;
    margin-left: auto;
    margin-right: auto;
-   background-size: cover;
-   background-repeat: no-repeat;}
-   /*@include retina  { 
-   background-image: 
-   linear-gradient (to right,  rgba(47, 48, 58, 0.4),
-   rgba(47, 48, 58, 0.4)), url(../img/hero-mob2x.jpg)
-   }*/
-
+   @include retina{
+      background-image: linear-gradient(rgba(47,48,58,0.4),(47,48,58,0.4)),
+      url(../img/hero-mob2x.jpg);
+   }
    @include tablet {
-   background-image: 
-   linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-   url(../img/hero-tab.jpg);}
-   /*@include retina  { 
-   background-image: 
-   linear-gradient (to right,  rgba(47, 48, 58, 0.4),
-   rgba(47, 48, 58, 0.4)), url(../img/hero-tab2x.jpg)
-   }}*/
-   @include desktop{
-   background-color:$secondary-bg-color;
-   padding-top: 200px;
-   padding-bottom: 200px;
-   background-image: 
-   linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-   url(../../img/hero-desktop.jpg);}
-   /*@include retina  {
-   background-image: 
-   linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-   url(../img/hero-desktop2x.jpg)
+      background-image:
+      url(../img/hero-tab.jpg);
+      @include retina{
+      background-image: linear-gradient(rgba(47,48,58,0.4),(47,48,58,0.4)),
+      url(../img/hero-tab2x.jpg)
    }
    }
-}*/
+   @include desktop {
+      padding-top: 200px;
+      padding-bottom: 200px;
+      background-image:
+      url(../../img/hero-desktop.jpg);
+      @media (min-divice-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(47,48,58,0.4),(47,48,58,0.4)),
+      url(../img/hero-desktop2x.jpg);
+      }
+   }
+}
+
 .hero__title {
    margin-bottom: 30px;
    margin-left: auto;
