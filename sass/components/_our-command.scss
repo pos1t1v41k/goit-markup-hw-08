@@ -13,10 +13,15 @@
    .our-command__title {
    margin-bottom: 50px;
    font-weight: 700;
-   font-size: 36px;
-   line-height: 42px;
+   font-size: 28px;
+   line-height: 1.17;
    letter-spacing: 0.03em;
    color: $title-text-color;
+   @include desktop {
+   font-size: 36px;
+   line-height: 1.16;
+   letter-spacing: 0.03em;
+   }
    }
 
    .our-command__list {
